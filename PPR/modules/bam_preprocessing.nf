@@ -9,6 +9,7 @@ process BAM_PREPROCESSING {
 
     output:
     tuple val(sample_name), path("${sample_name}_chr_named_rg.bam"), path("${sample_name}_chr_named_rg.bam.bai"), emit: bam
+    path "${sample_name}.flagstat.txt", emit: flagstat
 
     script:
     def mem_per_thread = Math.max(1, (task.memory.toGiga() * 0.6 / task.cpus).intValue())
@@ -22,5 +23,6 @@ process BAM_PREPROCESSING {
         -o ${sample_name}_chr_named_rg.bam ${sample_name}_chr_named.bam
     rm -f ${sample_name}_chr_named.bam
     samtools index -@ ${task.cpus} ${sample_name}_chr_named_rg.bam
+    samtools flagstat -@ ${task.cpus} ${sample_name}_chr_named_rg.bam > ${sample_name}.flagstat.txt
     """
 }

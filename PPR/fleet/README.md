@@ -36,5 +36,5 @@ Wrap `run.sh` in `nohup` or tmux. `nextflow clean -f` after a successful push fr
 - `vg surject` reads the sampled GBZ directly; `vg view` and `vg index -x` steps removed.
 - Intermediates published as symlinks, finals copied.
 - Graph and reference are staged task inputs, no bind mounts.
-- The published `vg surject` call had a stray `- i` argument (no effect); dropped.
+- `vg surject -i` (interleaved pairs) restored: the published call had `- i`, a no-op, so BAMs were 0% properly paired and DeepVariant ran without insert-size signal. `<sample>.flagstat.txt` in `small_variants/` shows the properly-paired rate. This fix is the reason for the rerun.
 - KMC memory follows the task memory instead of a fixed 120 GB.

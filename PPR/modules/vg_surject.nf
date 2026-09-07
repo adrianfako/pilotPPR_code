@@ -11,6 +11,8 @@ process VG_SURJECT {
     tuple val(sample_name), path("${sample_name}_surject.bam"), emit: bam
     path "${sample_name}_surject.log", emit: log
 
+    // -i: consecutive GAM records are read pairs. The published run lacked it (typo '- i'),
+    // producing 0% properly paired BAMs; see the pairing-fix benchmark report.
     script:
     def paths = ((1..22) + ['X', 'Y']).collect { "-p GRCh38#0#chr${it}" }.join(' ')
     """
