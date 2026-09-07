@@ -1,84 +1,39 @@
 #!/usr/bin/env nextflow
 
-nextflow.enable.dsl = 2
-
-// Include modules
 include { KMC_COUNT } from './modules/kmc'
 include { HAPLOTYPE_SAMPLING } from './modules/haplotype_sampling'
 include { VG_GIRAFFE } from './modules/vg_giraffe'
 include { VG_PACK } from './modules/vg_pack'
 include { VG_CALL } from './modules/vg_call'
 include { COMPRESS_INDEX_VCF } from './modules/compress_index'
-
-// Include subworkflow
 include { SMALLVARIANTS_DEEPVARIANT } from './subworkflows/smallvariants_deepvariant'
 
-// Parameters validation
-if (!params.reads) {
-    error "Please provide reads with --reads"
-}
-if (!params.sample_name) {
-    error "Please provide sample name with --sample_name"
-}
-if (!params.outdir) {
-    error "Please provide output directory with --outdir"
-}
-
 workflow {
-    // Create input channel for paired reads
-    reads_ch = Channel.fromFilePairs(params.reads, checkIfExists: true)
-        .map { sample_id, files -> 
-            tuple(params.sample_name, files)
-        }
-    
-    // K-mer counting
-    KMC_COUNT(reads_ch)
-    
-    // Haplotype sampling
-    HAPLOTYPE_SAMPLING(KMC_COUNT.out.kff)
-    
-    // Alignment with vg giraffe
-    VG_GIRAFFE(HAPLOTYPE_SAMPLING.out.gbz, reads_ch)
-    
-    // vg pack
-    VG_PACK(VG_GIRAFFE.out.gam, HAPLOTYPE_SAMPLING.out.gbz)
-    
-    // vg call
-    VG_CALL(VG_PACK.out.pack, HAPLOTYPE_SAMPLING.out.gbz)
-    
-    // Compress and index VCF
-    COMPRESS_INDEX_VCF(VG_CALL.out.vcf)
-    
-    // Optional small variants calling with DeepVariant
-    // Pornește doar după ce se termină COMPRESS_INDEX_VCF
-    if (params.run_deepvariant) {
-        // Creează un trigger bazat pe finalizarea COMPRESS_INDEX_VCF
-        trigger_ready = COMPRESS_INDEX_VCF.out.vcf_gz.map { sample_name, vcf_gz -> sample_name }
-        
-        // Combină datele necesare cu trigger-ul
-        gam_ready = VG_GIRAFFE.out.gam
-            .combine(trigger_ready)
-            .filter { gam_sample, gam_file, trigger_sample -> gam_sample == trigger_sample }
-            .map { gam_sample, gam_file, trigger_sample -> tuple(gam_sample, gam_file) }
-            
-        gbz_ready = HAPLOTYPE_SAMPLING.out.gbz
-            .combine(trigger_ready)
-            .filter { gbz_sample, gbz_file, trigger_sample -> gbz_sample == trigger_sample }
-            .map { gbz_sample, gbz_file, trigger_sample -> tuple(gbz_sample, gbz_file) }
-        
-        SMALLVARIANTS_DEEPVARIANT(
-            gam_ready,
-            gbz_ready
-        )
-    }
-}
+    if (!params.reads)  error "Please provide a paired-read glob with --reads"
+    if (!params.outdir) error "Please provide an output directory with --outdir"
 
-workflow.onComplete {
-    println "Pipeline completed at: $workflow.complete"
-    println "Execution status: ${ workflow.success ? 'OK' : 'failed' }"
+    // Sample id = the part of the file name before the R1/R2 token; one tuple per sample.
+    reads_ch = Channel.fromFilePairs(params.reads, checkIfExists: true)
+
+    full_gbz = file(params.graph_gbz, checkIfExists: true)
+    hapl     = file(params.graph_hapl, checkIfExists: true)
+    ref      = file(params.reference_fasta, checkIfExists: true)
+    ref_fai  = file("${params.reference_fasta}.fai", checkIfExists: true)
+
+    KMC_COUNT(reads_ch)
+    HAPLOTYPE_SAMPLING(KMC_COUNT.out.kff, full_gbz, hapl)
+    VG_GIRAFFE(HAPLOTYPE_SAMPLING.out.gbz.join(reads_ch))
+
+    // Every per-sample pairing goes through join(): with several samples in flight,
+    // two independent queue channels would pair by arrival order, not by sample.
+    gam_gbz = VG_GIRAFFE.out.gam.join(HAPLOTYPE_SAMPLING.out.gbz)
+
+    // SV branch (vg pack / call) and DeepVariant branch run independently.
+    VG_PACK(VG_GIRAFFE.out.gam, full_gbz)
+    VG_CALL(VG_PACK.out.pack, full_gbz)
+    COMPRESS_INDEX_VCF(VG_CALL.out.vcf)
+
     if (params.run_deepvariant) {
-        println "Small variants calling with DeepVariant: completed"
-    } else {
-        println "Small variants calling with DeepVariant: skipped (use --run_deepvariant to enable)"
+        SMALLVARIANTS_DEEPVARIANT(gam_gbz, ref, ref_fai)
     }
 }
