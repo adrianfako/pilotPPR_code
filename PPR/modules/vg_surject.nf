@@ -16,7 +16,7 @@ process VG_SURJECT {
     script:
     def paths = ((1..22) + ['X', 'Y']).collect { "-p GRCh38#0#chr${it}" }.join(' ')
     """
-    vg surject -x ${gbz_file} -b -t ${task.cpus} --prune-low-cplx \
+    vg surject -x ${gbz_file} -b -i -t ${task.cpus} --prune-low-cplx \
         ${paths} \
         ${gam_file} > ${sample_name}_surject.bam 2> ${sample_name}_surject.log
     """
