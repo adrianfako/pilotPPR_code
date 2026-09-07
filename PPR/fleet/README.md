@@ -38,3 +38,23 @@ Wrap `run.sh` in `nohup` or tmux. `nextflow clean -f` after a successful push fr
 - Graph and reference are staged task inputs, no bind mounts.
 - `vg surject -i` (interleaved pairs) restored: the published call had `- i`, a no-op, so BAMs were 0% properly paired and DeepVariant ran without insert-size signal. `<sample>.flagstat.txt` in `small_variants/` shows the properly-paired rate. This fix is the reason for the rerun.
 - KMC memory follows the task memory instead of a fixed 120 GB.
+
+## Pilot ICDG24 on R5, 2026-09-07 (36 cores, 18 threads per task)
+
+| step | wall | peak RSS |
+|---|---|---|
+| KMC_COUNT | 5m 43s | 122 GB |
+| HAPLOTYPE_SAMPLING | 6m 3s | 37 GB |
+| VG_GIRAFFE | 1h 32m | 61 GB |
+| VG_PACK | 17m 37s | 64 GB |
+| VG_CALL | 39m 22s | 50 GB |
+| VG_SURJECT (GBZ, -i) | 1h 51m | 14 GB |
+| BAM_PREPROCESSING | 13m 56s | 80 GB |
+| DEEPVARIANT (18 shards) | 3h 21m | 57 GB |
+
+7h 11m wall, 146 CPU hours, 228 GB scratch. Final BAM 323.7 M reads, 95.91% properly
+paired, 0 supplementary. DeepVariant VCF 4.61 M PASS. DeepVariant split: make_examples
+2h 42m, call_variants 13m, postprocess 26m; the config now gives DEEPVARIANT the whole box.
+Kaalia's nvidia runtime rewrites `NVIDIA_VISIBLE_DEVICES` to `void` inside the container
+but still injects the requested card (CDI mode); `nvidia-smi -L` inside shows it.
+
