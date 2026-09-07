@@ -20,7 +20,7 @@ process VG_SURJECT {
         -b ${gam_file} \\
         -t ${task.cpus} \\
         --prune-low-cplx \\
-        - i \\
+        -i \\
         -p GRCh38#0#chr1 -p GRCh38#0#chr2 -p GRCh38#0#chr3 -p GRCh38#0#chr4 -p GRCh38#0#chr5 \\
         -p GRCh38#0#chr6 -p GRCh38#0#chr7 -p GRCh38#0#chr8 -p GRCh38#0#chr9 -p GRCh38#0#chr10 \\
         -p GRCh38#0#chr11 -p GRCh38#0#chr12 -p GRCh38#0#chr13 -p GRCh38#0#chr14 -p GRCh38#0#chr15 \\
