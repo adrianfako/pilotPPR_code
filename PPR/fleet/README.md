@@ -41,8 +41,11 @@ Wrap `run.sh` in `nohup` or tmux. `nextflow clean -f` after a successful push fr
 - Third caller `PANGENIE` (PanGenie 4.2.1): k-mer genotyping of the HPRC v1.1 panel
   (`hprc-v1.1-mc-grch38.vcf.gz`, vcfbub-filtered, 45 samples) straight from the reads, no
   alignment. One-time index per fleet: `graph/pangenie/build-index.sh` (PanGenie-index
-  against the same chr-named GRCh38; panel and reference uncompressed). Per sample the
-  reads are decompressed into the task dir (~3x the gz size, transient). `--run_pangenie false` skips it.
+  against the same chr-named GRCh38; panel and reference uncompressed). The published panel
+  needs three fixes first, all in that script: drop the haploid CHM13 column, write single
+  alleles on male chrX/chrY as g|g, keep only contigs the fasta has. Index: 36 min, 234 GB
+  peak (build on a 377 GB host, copy elsewhere), 29 GB. Per sample the reads are
+  decompressed into the task dir (~3x the gz size, transient). `--run_pangenie false` skips it.
 
 ## Pilot ICDG24 on R5, 2026-09-07 (36 cores, 18 threads per task)
 
@@ -56,6 +59,7 @@ Wrap `run.sh` in `nohup` or tmux. `nextflow clean -f` after a successful push fr
 | VG_SURJECT (GBZ, -i) | 1h 51m | 14 GB |
 | BAM_PREPROCESSING | 13m 56s | 80 GB |
 | DEEPVARIANT (18 shards) | 3h 21m | 57 GB |
+| PANGENIE (18 threads, incl. 20 min zcat) | 3h 3m | 78 GB |
 
 7h 11m wall, 146 CPU hours, 228 GB scratch. Final BAM 323.7 M reads, 95.91% properly
 paired, 0 supplementary. DeepVariant VCF 4.61 M PASS. DeepVariant split: make_examples
