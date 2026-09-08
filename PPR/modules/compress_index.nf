@@ -1,6 +1,6 @@
 process COMPRESS_INDEX_VCF {
     tag "$sample_name"
-    publishDir "${params.outdir}/${subdir}", mode: 'copy'
+    publishDir { "${params.outdir}/${subdir}" }, mode: 'copy'
 
     container 'quay.io/biocontainers/samtools:1.17--h00cdaf9_0'
 
