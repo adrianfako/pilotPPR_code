@@ -6,8 +6,9 @@ title: PPR fleet rerun on vast hosts
 # PPR fleet rerun on vast hosts
 
 One Nextflow run per vast host, local executor, no scheduler, no shared storage.
-`samples.tsv` assigns the 48 pilot1 samples (24 Aviti, 24 Illumina) to the six hosts,
-weighted by cores and free scratch. Per-sample chain is independent, so parallelism is
+`samples.tsv` assigns the 48 pilot1 samples (24 patients, each on Aviti and Illumina) to the
+six hosts, both instruments of a patient on the same host, balanced by bytes over cores and
+free scratch. Per-sample chain is independent, so parallelism is
 samples across hosts plus two samples in flight per host (each heavy task takes half the cores).
 
 ## Host layout

@@ -1,49 +1,49 @@
-sample	platform	r1	r2	box
-12ICDG_S11	illumina	pilot1/illumina/processed1/12ICDG_S11/qc/12ICDG_S11_r1_val_1.fq.gz	pilot1/illumina/processed1/12ICDG_S11/qc/12ICDG_S11_r2_val_2.fq.gz	vast-eu-2-hpc-4
-20ICDG_S12	illumina	pilot1/illumina/processed1/20ICDG_S12/qc/20ICDG_S12_r1_val_1.fq.gz	pilot1/illumina/processed1/20ICDG_S12/qc/20ICDG_S12_r2_val_2.fq.gz	vast-eu-2-hpc-4
-4ICDG_S10	illumina	pilot1/illumina/processed1/4ICDG_S10/qc/4ICDG_S10_r1_val_1.fq.gz	pilot1/illumina/processed1/4ICDG_S10/qc/4ICDG_S10_r2_val_2.fq.gz	vast-eu-2-hpc-4
-9ICDG_S2	illumina	pilot1/illumina/processed1/9ICDG_S2/qc/9ICDG_S2_r1_val_1.fq.gz	pilot1/illumina/processed1/9ICDG_S2/qc/9ICDG_S2_r2_val_2.fq.gz	vast-eu-2-hpc-4
-ICDG12	aviti	pilot1/aviti/processed1/ICDG12/qc/ICDG12_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG12/qc/ICDG12_R2_val_2.fq.gz	vast-eu-2-hpc-4
-ICDG15	aviti	pilot1/aviti/processed1/ICDG15/qc/ICDG15_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG15/qc/ICDG15_R2_val_2.fq.gz	vast-eu-2-hpc-4
-ICDG17	aviti	pilot1/aviti/processed1/ICDG17/qc/ICDG17_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG17/qc/ICDG17_R2_val_2.fq.gz	vast-eu-2-hpc-4
-11ICDG_S8	illumina	pilot1/illumina/processed1/11ICDG_S8/qc/11ICDG_S8_r1_val_1.fq.gz	pilot1/illumina/processed1/11ICDG_S8/qc/11ICDG_S8_r2_val_2.fq.gz	vast-eu-2-render-r3
-14ICDG_S17	illumina	pilot1/illumina/processed1/14ICDG_S17/qc/14ICDG_S17_r1_val_1.fq.gz	pilot1/illumina/processed1/14ICDG_S17/qc/14ICDG_S17_r2_val_2.fq.gz	vast-eu-2-render-r3
-1ICDG_S1	illumina	pilot1/illumina/processed1/1ICDG_S1/qc/1ICDG_S1_r1_val_1.fq.gz	pilot1/illumina/processed1/1ICDG_S1/qc/1ICDG_S1_r2_val_2.fq.gz	vast-eu-2-render-r3
-21ICDG_S15	illumina	pilot1/illumina/processed1/21ICDG_S15/qc/21ICDG_S15_r1_val_1.fq.gz	pilot1/illumina/processed1/21ICDG_S15/qc/21ICDG_S15_r2_val_2.fq.gz	vast-eu-2-render-r3
-7ICDG_S19	illumina	pilot1/illumina/processed1/7ICDG_S19/qc/7ICDG_S19_r1_val_1.fq.gz	pilot1/illumina/processed1/7ICDG_S19/qc/7ICDG_S19_r2_val_2.fq.gz	vast-eu-2-render-r3
-ICDG10	aviti	pilot1/aviti/processed1/ICDG10/qc/ICDG10_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG10/qc/ICDG10_R2_val_2.fq.gz	vast-eu-2-render-r3
-ICDG18	aviti	pilot1/aviti/processed1/ICDG18/qc/ICDG18_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG18/qc/ICDG18_R2_val_2.fq.gz	vast-eu-2-render-r3
-ICDG6	aviti	pilot1/aviti/processed1/ICDG6/qc/ICDG6_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG6/qc/ICDG6_R2_val_2.fq.gz	vast-eu-2-render-r3
-13ICDG_S14	illumina	pilot1/illumina/processed1/13ICDG_S14/qc/13ICDG_S14_r1_val_1.fq.gz	pilot1/illumina/processed1/13ICDG_S14/qc/13ICDG_S14_r2_val_2.fq.gz	vast-eu-2-render-r5
-15ICDG_S20	illumina	pilot1/illumina/processed1/15ICDG_S20/qc/15ICDG_S20_r1_val_1.fq.gz	pilot1/illumina/processed1/15ICDG_S20/qc/15ICDG_S20_r2_val_2.fq.gz	vast-eu-2-render-r5
-3ICDG_S7	illumina	pilot1/illumina/processed1/3ICDG_S7/qc/3ICDG_S7_r1_val_1.fq.gz	pilot1/illumina/processed1/3ICDG_S7/qc/3ICDG_S7_r2_val_2.fq.gz	vast-eu-2-render-r5
-ICDG11	aviti	pilot1/aviti/processed1/ICDG11/qc/ICDG11_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG11/qc/ICDG11_R2_val_2.fq.gz	vast-eu-2-render-r5
-ICDG14	aviti	pilot1/aviti/processed1/ICDG14/qc/ICDG14_r1_val_1.fq.gz	pilot1/aviti/processed1/ICDG14/qc/ICDG14_r2_val_2.fq.gz	vast-eu-2-render-r5
-ICDG16	aviti	pilot1/aviti/processed1/ICDG16/qc/ICDG16_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG16/qc/ICDG16_R2_val_2.fq.gz	vast-eu-2-render-r5
-ICDG21	aviti	pilot1/aviti/processed1/ICDG21/qc/ICDG21_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG21/qc/ICDG21_R2_val_2.fq.gz	vast-eu-2-render-r5
-ICDG7	aviti	pilot1/aviti/processed1/ICDG7/qc/ICDG7_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG7/qc/ICDG7_R2_val_2.fq.gz	vast-eu-2-render-r5
-ICDG9	aviti	pilot1/aviti/processed1/ICDG9/qc/ICDG9_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG9/qc/ICDG9_R2_val_2.fq.gz	vast-eu-2-render-r5
-19ICDG_S9	illumina	pilot1/illumina/processed1/19ICDG_S9/qc/19ICDG_S9_r1_val_1.fq.gz	pilot1/illumina/processed1/19ICDG_S9/qc/19ICDG_S9_r2_val_2.fq.gz	vast-eu-2-render-r6
-23ICDG_S21	illumina	pilot1/illumina/processed1/23ICDG_S21/qc/23ICDG_S21_r1_val_1.fq.gz	pilot1/illumina/processed1/23ICDG_S21/qc/23ICDG_S21_r2_val_2.fq.gz	vast-eu-2-render-r6
-2ICDG_S4	illumina	pilot1/illumina/processed1/2ICDG_S4/qc/2ICDG_S4_r1_val_1.fq.gz	pilot1/illumina/processed1/2ICDG_S4/qc/2ICDG_S4_r2_val_2.fq.gz	vast-eu-2-render-r6
-6ICDG_S16	illumina	pilot1/illumina/processed1/6ICDG_S16/qc/6ICDG_S16_r1_val_1.fq.gz	pilot1/illumina/processed1/6ICDG_S16/qc/6ICDG_S16_r2_val_2.fq.gz	vast-eu-2-render-r6
-ICDG2	aviti	pilot1/aviti/processed1/ICDG2/qc/ICDG2_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG2/qc/ICDG2_R2_val_2.fq.gz	vast-eu-2-render-r6
-ICDG20	aviti	pilot1/aviti/processed1/ICDG20/qc/ICDG20_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG20/qc/ICDG20_R2_val_2.fq.gz	vast-eu-2-render-r6
-ICDG23	aviti	pilot1/aviti/processed1/ICDG23/qc/ICDG23_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG23/qc/ICDG23_R2_val_2.fq.gz	vast-eu-2-render-r6
-ICDG24	aviti	pilot1/aviti/processed1/ICDG24/qc/ICDG24_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG24/qc/ICDG24_R2_val_2.fq.gz	vast-eu-2-render-r6
-ICDG8	aviti	pilot1/aviti/processed1/ICDG8/qc/ICDG8_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG8/qc/ICDG8_R2_val_2.fq.gz	vast-eu-2-render-r6
-10ICDG_S5	illumina	pilot1/illumina/processed1/10ICDG_S5/qc/10ICDG_S5_r1_val_1.fq.gz	pilot1/illumina/processed1/10ICDG_S5/qc/10ICDG_S5_r2_val_2.fq.gz	vast-eu-6-hpc-ait-1
-16ICDG_S23	illumina	pilot1/illumina/processed1/16ICDG_S23/qc/16ICDG_S23_r1_val_1.fq.gz	pilot1/illumina/processed1/16ICDG_S23/qc/16ICDG_S23_r2_val_2.fq.gz	vast-eu-6-hpc-ait-1
-18ICDG_S6	illumina	pilot1/illumina/processed1/18ICDG_S6/qc/18ICDG_S6_r1_val_1.fq.gz	pilot1/illumina/processed1/18ICDG_S6/qc/18ICDG_S6_r2_val_2.fq.gz	vast-eu-6-hpc-ait-1
-ICDG19	aviti	pilot1/aviti/processed1/ICDG19/qc/ICDG19_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG19/qc/ICDG19_R2_val_2.fq.gz	vast-eu-6-hpc-ait-1
-ICDG22	aviti	pilot1/aviti/processed1/ICDG22/qc/ICDG22_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG22/qc/ICDG22_R2_val_2.fq.gz	vast-eu-6-hpc-ait-1
-ICDG4	aviti	pilot1/aviti/processed1/ICDG4/qc/ICDG4_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG4/qc/ICDG4_R2_val_2.fq.gz	vast-eu-6-hpc-ait-1
-17ICDG_S3	illumina	pilot1/illumina/processed1/17ICDG_S3/qc/17ICDG_S3_r1_val_1.fq.gz	pilot1/illumina/processed1/17ICDG_S3/qc/17ICDG_S3_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-22ICDG_S18	illumina	pilot1/illumina/processed1/22ICDG_S18/qc/22ICDG_S18_r1_val_1.fq.gz	pilot1/illumina/processed1/22ICDG_S18/qc/22ICDG_S18_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-24ICDG_S24	illumina	pilot1/illumina/processed1/24ICDG_S24/qc/24ICDG_S24_r1_val_1.fq.gz	pilot1/illumina/processed1/24ICDG_S24/qc/24ICDG_S24_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-5ICDG_S13	illumina	pilot1/illumina/processed1/5ICDG_S13/qc/5ICDG_S13_r1_val_1.fq.gz	pilot1/illumina/processed1/5ICDG_S13/qc/5ICDG_S13_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-8ICDG_S22	illumina	pilot1/illumina/processed1/8ICDG_S22/qc/8ICDG_S22_r1_val_1.fq.gz	pilot1/illumina/processed1/8ICDG_S22/qc/8ICDG_S22_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-ICDG1	aviti	pilot1/aviti/processed1/ICDG1/qc/ICDG1_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG1/qc/ICDG1_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-ICDG13	aviti	pilot1/aviti/processed1/ICDG13/qc/ICDG13_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG13/qc/ICDG13_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-ICDG3	aviti	pilot1/aviti/processed1/ICDG3/qc/ICDG3_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG3/qc/ICDG3_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8
-ICDG5	aviti	pilot1/aviti/processed1/ICDG5/qc/ICDG5_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG5/qc/ICDG5_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8
+sample	platform	r1	r2	box	patient
+ICDG4	aviti	pilot1/aviti/processed1/ICDG4/qc/ICDG4_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG4/qc/ICDG4_R2_val_2.fq.gz	vast-eu-2-hpc-4	4
+4ICDG_S10	illumina	pilot1/illumina/processed1/4ICDG_S10/qc/4ICDG_S10_r1_val_1.fq.gz	pilot1/illumina/processed1/4ICDG_S10/qc/4ICDG_S10_r2_val_2.fq.gz	vast-eu-2-hpc-4	4
+ICDG13	aviti	pilot1/aviti/processed1/ICDG13/qc/ICDG13_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG13/qc/ICDG13_R2_val_2.fq.gz	vast-eu-2-hpc-4	13
+13ICDG_S14	illumina	pilot1/illumina/processed1/13ICDG_S14/qc/13ICDG_S14_r1_val_1.fq.gz	pilot1/illumina/processed1/13ICDG_S14/qc/13ICDG_S14_r2_val_2.fq.gz	vast-eu-2-hpc-4	13
+ICDG21	aviti	pilot1/aviti/processed1/ICDG21/qc/ICDG21_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG21/qc/ICDG21_R2_val_2.fq.gz	vast-eu-2-hpc-4	21
+21ICDG_S15	illumina	pilot1/illumina/processed1/21ICDG_S15/qc/21ICDG_S15_r1_val_1.fq.gz	pilot1/illumina/processed1/21ICDG_S15/qc/21ICDG_S15_r2_val_2.fq.gz	vast-eu-2-hpc-4	21
+ICDG22	aviti	pilot1/aviti/processed1/ICDG22/qc/ICDG22_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG22/qc/ICDG22_R2_val_2.fq.gz	vast-eu-2-hpc-4	22
+22ICDG_S18	illumina	pilot1/illumina/processed1/22ICDG_S18/qc/22ICDG_S18_r1_val_1.fq.gz	pilot1/illumina/processed1/22ICDG_S18/qc/22ICDG_S18_r2_val_2.fq.gz	vast-eu-2-hpc-4	22
+ICDG10	aviti	pilot1/aviti/processed1/ICDG10/qc/ICDG10_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG10/qc/ICDG10_R2_val_2.fq.gz	vast-eu-2-render-r3	10
+10ICDG_S5	illumina	pilot1/illumina/processed1/10ICDG_S5/qc/10ICDG_S5_r1_val_1.fq.gz	pilot1/illumina/processed1/10ICDG_S5/qc/10ICDG_S5_r2_val_2.fq.gz	vast-eu-2-render-r3	10
+ICDG12	aviti	pilot1/aviti/processed1/ICDG12/qc/ICDG12_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG12/qc/ICDG12_R2_val_2.fq.gz	vast-eu-2-render-r3	12
+12ICDG_S11	illumina	pilot1/illumina/processed1/12ICDG_S11/qc/12ICDG_S11_r1_val_1.fq.gz	pilot1/illumina/processed1/12ICDG_S11/qc/12ICDG_S11_r2_val_2.fq.gz	vast-eu-2-render-r3	12
+ICDG15	aviti	pilot1/aviti/processed1/ICDG15/qc/ICDG15_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG15/qc/ICDG15_R2_val_2.fq.gz	vast-eu-2-render-r3	15
+15ICDG_S20	illumina	pilot1/illumina/processed1/15ICDG_S20/qc/15ICDG_S20_r1_val_1.fq.gz	pilot1/illumina/processed1/15ICDG_S20/qc/15ICDG_S20_r2_val_2.fq.gz	vast-eu-2-render-r3	15
+ICDG2	aviti	pilot1/aviti/processed1/ICDG2/qc/ICDG2_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG2/qc/ICDG2_R2_val_2.fq.gz	vast-eu-2-render-r5	2
+2ICDG_S4	illumina	pilot1/illumina/processed1/2ICDG_S4/qc/2ICDG_S4_r1_val_1.fq.gz	pilot1/illumina/processed1/2ICDG_S4/qc/2ICDG_S4_r2_val_2.fq.gz	vast-eu-2-render-r5	2
+ICDG7	aviti	pilot1/aviti/processed1/ICDG7/qc/ICDG7_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG7/qc/ICDG7_R2_val_2.fq.gz	vast-eu-2-render-r5	7
+7ICDG_S19	illumina	pilot1/illumina/processed1/7ICDG_S19/qc/7ICDG_S19_r1_val_1.fq.gz	pilot1/illumina/processed1/7ICDG_S19/qc/7ICDG_S19_r2_val_2.fq.gz	vast-eu-2-render-r5	7
+ICDG8	aviti	pilot1/aviti/processed1/ICDG8/qc/ICDG8_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG8/qc/ICDG8_R2_val_2.fq.gz	vast-eu-2-render-r5	8
+8ICDG_S22	illumina	pilot1/illumina/processed1/8ICDG_S22/qc/8ICDG_S22_r1_val_1.fq.gz	pilot1/illumina/processed1/8ICDG_S22/qc/8ICDG_S22_r2_val_2.fq.gz	vast-eu-2-render-r5	8
+ICDG11	aviti	pilot1/aviti/processed1/ICDG11/qc/ICDG11_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG11/qc/ICDG11_R2_val_2.fq.gz	vast-eu-2-render-r5	11
+11ICDG_S8	illumina	pilot1/illumina/processed1/11ICDG_S8/qc/11ICDG_S8_r1_val_1.fq.gz	pilot1/illumina/processed1/11ICDG_S8/qc/11ICDG_S8_r2_val_2.fq.gz	vast-eu-2-render-r5	11
+ICDG23	aviti	pilot1/aviti/processed1/ICDG23/qc/ICDG23_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG23/qc/ICDG23_R2_val_2.fq.gz	vast-eu-2-render-r5	23
+23ICDG_S21	illumina	pilot1/illumina/processed1/23ICDG_S21/qc/23ICDG_S21_r1_val_1.fq.gz	pilot1/illumina/processed1/23ICDG_S21/qc/23ICDG_S21_r2_val_2.fq.gz	vast-eu-2-render-r5	23
+ICDG24	aviti	pilot1/aviti/processed1/ICDG24/qc/ICDG24_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG24/qc/ICDG24_R2_val_2.fq.gz	vast-eu-2-render-r5	24
+24ICDG_S24	illumina	pilot1/illumina/processed1/24ICDG_S24/qc/24ICDG_S24_r1_val_1.fq.gz	pilot1/illumina/processed1/24ICDG_S24/qc/24ICDG_S24_r2_val_2.fq.gz	vast-eu-2-render-r5	24
+ICDG1	aviti	pilot1/aviti/processed1/ICDG1/qc/ICDG1_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG1/qc/ICDG1_R2_val_2.fq.gz	vast-eu-2-render-r6	1
+1ICDG_S1	illumina	pilot1/illumina/processed1/1ICDG_S1/qc/1ICDG_S1_r1_val_1.fq.gz	pilot1/illumina/processed1/1ICDG_S1/qc/1ICDG_S1_r2_val_2.fq.gz	vast-eu-2-render-r6	1
+ICDG14	aviti	pilot1/aviti/processed1/ICDG14/qc/ICDG14_r1_val_1.fq.gz	pilot1/aviti/processed1/ICDG14/qc/ICDG14_r2_val_2.fq.gz	vast-eu-2-render-r6	14
+14ICDG_S17	illumina	pilot1/illumina/processed1/14ICDG_S17/qc/14ICDG_S17_r1_val_1.fq.gz	pilot1/illumina/processed1/14ICDG_S17/qc/14ICDG_S17_r2_val_2.fq.gz	vast-eu-2-render-r6	14
+ICDG18	aviti	pilot1/aviti/processed1/ICDG18/qc/ICDG18_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG18/qc/ICDG18_R2_val_2.fq.gz	vast-eu-2-render-r6	18
+18ICDG_S6	illumina	pilot1/illumina/processed1/18ICDG_S6/qc/18ICDG_S6_r1_val_1.fq.gz	pilot1/illumina/processed1/18ICDG_S6/qc/18ICDG_S6_r2_val_2.fq.gz	vast-eu-2-render-r6	18
+ICDG20	aviti	pilot1/aviti/processed1/ICDG20/qc/ICDG20_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG20/qc/ICDG20_R2_val_2.fq.gz	vast-eu-2-render-r6	20
+20ICDG_S12	illumina	pilot1/illumina/processed1/20ICDG_S12/qc/20ICDG_S12_r1_val_1.fq.gz	pilot1/illumina/processed1/20ICDG_S12/qc/20ICDG_S12_r2_val_2.fq.gz	vast-eu-2-render-r6	20
+ICDG5	aviti	pilot1/aviti/processed1/ICDG5/qc/ICDG5_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG5/qc/ICDG5_R2_val_2.fq.gz	vast-eu-6-hpc-ait-1	5
+5ICDG_S13	illumina	pilot1/illumina/processed1/5ICDG_S13/qc/5ICDG_S13_r1_val_1.fq.gz	pilot1/illumina/processed1/5ICDG_S13/qc/5ICDG_S13_r2_val_2.fq.gz	vast-eu-6-hpc-ait-1	5
+ICDG9	aviti	pilot1/aviti/processed1/ICDG9/qc/ICDG9_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG9/qc/ICDG9_R2_val_2.fq.gz	vast-eu-6-hpc-ait-1	9
+9ICDG_S2	illumina	pilot1/illumina/processed1/9ICDG_S2/qc/9ICDG_S2_r1_val_1.fq.gz	pilot1/illumina/processed1/9ICDG_S2/qc/9ICDG_S2_r2_val_2.fq.gz	vast-eu-6-hpc-ait-1	9
+ICDG19	aviti	pilot1/aviti/processed1/ICDG19/qc/ICDG19_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG19/qc/ICDG19_R2_val_2.fq.gz	vast-eu-6-hpc-ait-1	19
+19ICDG_S9	illumina	pilot1/illumina/processed1/19ICDG_S9/qc/19ICDG_S9_r1_val_1.fq.gz	pilot1/illumina/processed1/19ICDG_S9/qc/19ICDG_S9_r2_val_2.fq.gz	vast-eu-6-hpc-ait-1	19
+ICDG3	aviti	pilot1/aviti/processed1/ICDG3/qc/ICDG3_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG3/qc/ICDG3_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8	3
+3ICDG_S7	illumina	pilot1/illumina/processed1/3ICDG_S7/qc/3ICDG_S7_r1_val_1.fq.gz	pilot1/illumina/processed1/3ICDG_S7/qc/3ICDG_S7_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8	3
+ICDG6	aviti	pilot1/aviti/processed1/ICDG6/qc/ICDG6_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG6/qc/ICDG6_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8	6
+6ICDG_S16	illumina	pilot1/illumina/processed1/6ICDG_S16/qc/6ICDG_S16_r1_val_1.fq.gz	pilot1/illumina/processed1/6ICDG_S16/qc/6ICDG_S16_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8	6
+ICDG16	aviti	pilot1/aviti/processed1/ICDG16/qc/ICDG16_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG16/qc/ICDG16_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8	16
+16ICDG_S23	illumina	pilot1/illumina/processed1/16ICDG_S23/qc/16ICDG_S23_r1_val_1.fq.gz	pilot1/illumina/processed1/16ICDG_S23/qc/16ICDG_S23_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8	16
+ICDG17	aviti	pilot1/aviti/processed1/ICDG17/qc/ICDG17_R1_val_1.fq.gz	pilot1/aviti/processed1/ICDG17/qc/ICDG17_R2_val_2.fq.gz	vast-eu-6-hpc-ait-8	17
+17ICDG_S3	illumina	pilot1/illumina/processed1/17ICDG_S3/qc/17ICDG_S3_r1_val_1.fq.gz	pilot1/illumina/processed1/17ICDG_S3/qc/17ICDG_S3_r2_val_2.fq.gz	vast-eu-6-hpc-ait-8	17
