@@ -6,6 +6,7 @@ include { VG_GIRAFFE } from './modules/vg_giraffe'
 include { VG_PACK } from './modules/vg_pack'
 include { VG_CALL } from './modules/vg_call'
 include { COMPRESS_INDEX_VCF } from './modules/compress_index'
+include { COMPRESS_INDEX_VCF as COMPRESS_INDEX_PANGENIE } from './modules/compress_index'
 include { PANGENIE } from './modules/pangenie'
 include { SMALLVARIANTS_DEEPVARIANT } from './subworkflows/smallvariants_deepvariant'
 
@@ -32,7 +33,7 @@ workflow {
     // SV branch (vg pack / call) and DeepVariant branch run independently.
     VG_PACK(VG_GIRAFFE.out.gam, full_gbz)
     VG_CALL(VG_PACK.out.pack, full_gbz)
-    COMPRESS_INDEX_VCF(VG_CALL.out.vcf)
+    COMPRESS_INDEX_VCF(VG_CALL.out.vcf, 'SV_calling')
 
     if (params.run_deepvariant) {
         SMALLVARIANTS_DEEPVARIANT(gam_gbz, ref, ref_fai)
@@ -42,5 +43,6 @@ workflow {
     if (params.run_pangenie) {
         pangenie_index = Channel.fromPath("${params.pangenie_index}*", checkIfExists: true).collect()
         PANGENIE(reads_ch, pangenie_index)
+        COMPRESS_INDEX_PANGENIE(PANGENIE.out.vcf, 'pangenie')
     }
 }
