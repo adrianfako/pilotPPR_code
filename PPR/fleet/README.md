@@ -38,6 +38,11 @@ Wrap `run.sh` in `nohup` or tmux. `nextflow clean -f` after a successful push fr
 - Graph and reference are staged task inputs, no bind mounts.
 - `vg surject -i` (interleaved pairs) restored: the published call had `- i`, a no-op, so BAMs were 0% properly paired and DeepVariant ran without insert-size signal. `<sample>.flagstat.txt` in `small_variants/` shows the properly-paired rate. This fix is the reason for the rerun.
 - KMC memory follows the task memory instead of a fixed 120 GB.
+- Third caller `PANGENIE` (PanGenie 4.2.1): k-mer genotyping of the HPRC v1.1 panel
+  (`hprc-v1.1-mc-grch38.vcf.gz`, vcfbub-filtered, 45 samples) straight from the reads, no
+  alignment. One-time index per fleet: `graph/pangenie/build-index.sh` (PanGenie-index
+  against the same chr-named GRCh38; panel and reference uncompressed). Per sample the
+  reads are decompressed into the task dir (~3x the gz size, transient). `--run_pangenie false` skips it.
 
 ## Pilot ICDG24 on R5, 2026-09-07 (36 cores, 18 threads per task)
 

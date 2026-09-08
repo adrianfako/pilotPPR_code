@@ -6,6 +6,7 @@ include { VG_GIRAFFE } from './modules/vg_giraffe'
 include { VG_PACK } from './modules/vg_pack'
 include { VG_CALL } from './modules/vg_call'
 include { COMPRESS_INDEX_VCF } from './modules/compress_index'
+include { PANGENIE } from './modules/pangenie'
 include { SMALLVARIANTS_DEEPVARIANT } from './subworkflows/smallvariants_deepvariant'
 
 workflow {
@@ -35,5 +36,11 @@ workflow {
 
     if (params.run_deepvariant) {
         SMALLVARIANTS_DEEPVARIANT(gam_gbz, ref, ref_fai)
+    }
+
+    // Third caller: k-mer genotyping of the HPRC panel straight from reads, no alignment.
+    if (params.run_pangenie) {
+        pangenie_index = Channel.fromPath("${params.pangenie_index}*", checkIfExists: true).collect()
+        PANGENIE(reads_ch, pangenie_index)
     }
 }
