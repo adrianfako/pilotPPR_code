@@ -11,8 +11,8 @@ process DEEPVARIANT {
     path ref_fai
 
     output:
-    tuple val(sample_name), path("${sample_name}.deepvariant.vcf.gz"), emit: vcf
-    tuple val(sample_name), path("${sample_name}.deepvariant.g.vcf.gz"), emit: gvcf
+    tuple val(sample_name), path("${sample_name}.deepvariant.vcf.gz"), path("${sample_name}.deepvariant.vcf.gz.tbi"), emit: vcf
+    tuple val(sample_name), path("${sample_name}.deepvariant.g.vcf.gz"), path("${sample_name}.deepvariant.g.vcf.gz.tbi"), emit: gvcf
 
     script:
     """
