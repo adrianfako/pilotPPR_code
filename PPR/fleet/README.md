@@ -62,6 +62,12 @@ Wrap `run.sh` in `nohup` or tmux. `nextflow clean -f` after a successful push fr
 | DEEPVARIANT (18 shards) | 3h 21m | 57 GB |
 | PANGENIE (18 threads, incl. 20 min zcat) | 3h 3m | 78 GB |
 
+Illumina pair of the same patient (24ICDG_S24, 60 GB, 780 M reads), 2026-09-08/09, DeepVariant on
+the whole box: KMC 10m, haplotypes 7m, giraffe 2h 58m, pack 34m, call 46m, surject 5h 12m, sort
+33m, DeepVariant 2h 40m (104 GB, 36 shards), PanGenie 3h 10m in parallel. 14h 51m wall, ~340 CPU
+hours, 96.07% properly paired. Time scales with reads; one patient (both instruments) is about a
+host-day with two samples in flight.
+
 7h 11m wall, 146 CPU hours, 228 GB scratch. Final BAM 323.7 M reads, 95.91% properly
 paired, 0 supplementary. DeepVariant VCF 4.61 M PASS. DeepVariant split: make_examples
 2h 42m, call_variants 13m, postprocess 26m; the config now gives DEEPVARIANT the whole box.
